@@ -16,3 +16,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  font-size: 62.5%;
+  
+  --area-porta-altura: 310px;
+  --area-porta-largura: 200px;
+}
