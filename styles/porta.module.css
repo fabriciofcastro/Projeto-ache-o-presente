@@ -1,0 +1,17 @@
+.porta {
+    display: flex;
+    flex-direction: column;
+
+    width: 200px;
+    height: 310px;
+    background-color: chocolate;
+}
+
+.numero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    
+
+}
