@@ -6,10 +6,11 @@ import styles from '../styles/divGlobal.module.css'
 
 
 export default function Home() {
+  
   return (
     <div className={styles.div_global}>
       <Presente></Presente>
-      <Porta /> 
+      <Porta selecionada/> 
       <Porta />
     </div>
   )
