@@ -8,14 +8,17 @@ import styles from '../styles/divGlobal.module.css'
 
 
 export default function Home() {
-   const [p1, setP1] = useState(new PortaModel(1))
+   const [p1, setP1] = useState(new PortaModel(3))
+   const [texto, setTexto] = useState("")
   
   
   return (
     <div className={styles.div_global}>
-      <Presente></Presente>
-      <Porta porta={p1} /> 
-  
+      <Presente />
+      <input type="text" value={texto}
+        onChange={e => setTexto(e.target.value)} />
+      <Porta value={p1} onChange={novaPorta => setP1(novaPorta)} /> 
+      
     </div>
   )
 }
