@@ -3,21 +3,28 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Porta from '../components/porta'
 import Presente from '../components/Presente'
-import PortaModel from '../model/portaModel'
 import styles from '../styles/divGlobal.module.css'
-import PortaLogica from '../logic/portaLogica'
+import portaLogica, { atualizarPortas } from '../logic/portaLogica'
 
 
 
 export default function Home() {
-   const [p1, setP1] = useState(new PortaModel(3))
+  const [portas, setPortas] = useState( portaLogica(3, 3))
   
-   PortaLogica(2, 3)
-
+  function renderizarPortas() {
+    return portas.map( porta => {
+      return <Porta key={ porta.numero } value={ porta } 
+      onChange={ novaPorta => {
+        setPortas(atualizarPortas( portas, novaPorta)) }
+       } />
+    })
+  }
+ 
   return (
     <div className={styles.div_global}>
       <Presente />
-      <Porta value={p1} onChange={novaPorta => setP1(novaPorta)} /> 
+      { renderizarPortas() }
+
       
     </div>
   )

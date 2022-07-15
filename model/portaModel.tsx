@@ -1,7 +1,7 @@
 export default class PortaModel {
     
     #numero: number
-    #aberta: boolean
+#aberta: boolean
     #selecionada: boolean
     #temPresente: boolean
     
@@ -11,6 +11,7 @@ export default class PortaModel {
          this.#selecionada = selecionada
          this.#aberta = aberta
          this.#numero = numero
+         
     }
 
     get numero() {
@@ -23,6 +24,10 @@ export default class PortaModel {
 
     get aberta() {
         return this.#aberta
+    }
+
+    get fechada() {
+        return !this.#aberta
     }
 
     get selecionada() {
