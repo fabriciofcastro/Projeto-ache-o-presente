@@ -1,10 +1,11 @@
 import { useState } from "react"
-import Porta from '../components/porta'
-import Presente from '../components/Presente'
-import styles from '../styles/divGlobal.module.css'
-import portaLogica, { atualizarPortas } from '../logic/portaLogica'
-import stylesJogo from '../styles/jogo.module.css'
+import Porta from '../../../components/porta'
+import Presente from '../../../components/Presente'
+import styles from '../../../styles/divGlobal.module.css'
+import portaLogica, { atualizarPortas } from '../../../logic/portaLogica'
+import stylesJogo from '../../../styles/jogo.module.css'
 import Link from 'next/link'
+import { useRouter } from "/next/router"
 
 
 export default function Jogo() {

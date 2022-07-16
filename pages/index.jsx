@@ -1,4 +1,4 @@
-import Jogo from './jogo'
+import Jogo from '.'
 
 export default function Home() {
   
