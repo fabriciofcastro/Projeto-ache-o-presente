@@ -4,6 +4,7 @@ import Presente from '../components/Presente'
 import styles from '../styles/divGlobal.module.css'
 import portaLogica, { atualizarPortas } from '../logic/portaLogica'
 import stylesJogo from '../styles/jogo.module.css'
+import Link from 'next/link'
 
 
 export default function Jogo() {
@@ -23,8 +24,10 @@ export default function Jogo() {
           <div className={stylesJogo.portas}>
               { renderizarPortas() }
           </div>
-           <div className="botoes">
-
+           <div className={stylesJogo.botoes}>
+              <Link href="/">
+                <button >Reiniciar Jogo</button>
+              </Link>
            </div>
         </div>
     )
